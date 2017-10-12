@@ -1,0 +1,17 @@
+context Country{
+ 
+/*@@layout{"layoutInfo":{}}*/
+entity Cities{
+ key city : String(100);
+people : Integer;
+contry_code : Association[0..1] to Countries {Code};
+};
+
+/*@@layout{"layoutInfo":{}}*/
+entity Countries{
+ key Code : String(100);
+Country : String(100);
+Continent : String(100);
+};
+
+};
